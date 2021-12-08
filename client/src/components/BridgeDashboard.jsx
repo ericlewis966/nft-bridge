@@ -150,7 +150,7 @@ const BridgeDashboard = () => {
         var ids = data.split(",");
         ids.shift();
         ids.map((value, key) => {
-          ethContract.methods.tokenURI(value).call((err, data) => {
+          bscContract.methods.tokenURI(value).call((err, data) => {
             console.log(data);
             _nftItems.push({url: `https://gateway.pinata.cloud/ipfs/${data}`, id: value});
             console.log(key, _nftItems);
